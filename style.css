@@ -1,23 +1,59 @@
+/* Genel */
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: radial-gradient(circle at top, #0b1d2a, #02040a);
   color: #e6f1ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+}
+
+/* Üst kahraman alan */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  letter-spacing: 6px;
+  margin: 0 0 12px;
+}
+
+.hero p {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Alt bölüm */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
   text-align: center;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 2px;
+.section h2 {
+  margin: 0 0 16px;
+  font-size: 28px;
+  letter-spacing: 1px;
 }
 
-p {
-  opacity: 0.8;
-  max-width: 500px;
-  margin: auto;
+.section p {
+  margin: 0 auto;
+  max-width: 520px;
+  opacity: 0.85;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Mobil */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 48px; letter-spacing: 4px; }
+  .section h2 { font-size: 24px; }
 }
